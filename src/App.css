@@ -1,0 +1,41 @@
+.app-container {
+  max-width: calc(1366px - 16px);
+  height: calc(100vh - 16px);
+  margin: 0 auto;
+  background-color: black;
+  border: 8px solid #b9b9b9;
+}
+.app-wrapper {
+  height: calc(100% - 40px);
+  border: 1px solid #fff;
+  font-size: 14px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-footer {
+  height: 40px;
+  width: 100%;
+  background-color: #b9b9b9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.app-footer > button {
+  background-color: #d3d3d3;
+  width: 100px;
+  height: 100%;
+  font-size: 12px;
+  font-family: "Dogica";
+  cursor: pointer;
+}
+.app-footer > button:hover{ 
+  background-color: #b9b9b9;
+}
+.app-footer_date {
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
