@@ -11,8 +11,42 @@
   font-size: 14px;
   color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+.app-wrapper_col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  margin: 15px 15px 0;
+}
+.app-wrapper_item {
+  width: 75px;
+  height: 75px;
+  margin: 10px 0;
+}
+.app-wrapper_item > button{
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.app-wrapper_item > button:hover{
+  border: 1px solid blue;
+  
+}
+.app-wrapper_item__icon {
+  margin: 0 0 5px;
+}
+.app-wrapper_item__icon > img {
+  width: 50px;
+  height: 50px;
 }
 .app-footer {
   height: 40px;
@@ -30,7 +64,7 @@
   font-family: "Dogica";
   cursor: pointer;
 }
-.app-footer > button:hover{ 
+.app-footer > button:hover {
   background-color: #b9b9b9;
 }
 .app-footer_date {

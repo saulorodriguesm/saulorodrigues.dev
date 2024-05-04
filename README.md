@@ -1,6 +1,4 @@
-### My Personal Portfolio 
-
-IMPORTANT [This is a draft] IMPORTANT
+### My Space
 
 About: 
 After years I finally decided to create a website as a portfolio, but I wanted to do something more interesting and fun to code.
