@@ -22,13 +22,14 @@
   margin: 15px 15px 0;
 }
 .app-wrapper_item {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   margin: 10px 0;
 }
-.app-wrapper_item > button{
+.app-wrapper_item > button {
   justify-content: center;
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   background: transparent;
@@ -37,9 +38,8 @@
   cursor: pointer;
   border: 1px solid transparent;
 }
-.app-wrapper_item > button:hover{
+.app-wrapper_item > button:hover {
   border: 1px solid blue;
-  
 }
 .app-wrapper_item__icon {
   margin: 0 0 5px;
@@ -48,7 +48,7 @@
   width: 50px;
   height: 50px;
 }
-.app-footer {
+.app-footer > footer {
   height: 40px;
   width: 100%;
   background-color: #b9b9b9;
@@ -56,15 +56,36 @@
   justify-content: space-between;
   align-items: center;
 }
-.app-footer > button {
+.app-footer_col {
+  height: 100%;
+  margin-top: 5px;
+  display: flex;
+}
+.app-footer_col > button {
   background-color: #d3d3d3;
   width: 100px;
   height: 100%;
   font-size: 12px;
   font-family: "Dogica";
   cursor: pointer;
+  height: 100%;
 }
-.app-footer > button:hover {
+.app-footer_contact {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.app-footer_contact > img {
+  width: 25px;
+  height: 25px;
+  border: 1px solid transparent;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.app-footer_contact > img:hover {
+  border-color: #d3d3d3;
+}
+.app-footer_col > button:hover {
   background-color: #b9b9b9;
 }
 .app-footer_date {
@@ -72,4 +93,5 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }

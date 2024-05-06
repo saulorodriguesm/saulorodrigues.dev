@@ -1,8 +1,8 @@
 import "./App.css";
-import icons from "./components/Icons"
+import icons from "./components/Icons";
+import Footer from "./components/Footer"
 
 function App() {
-  const date = new Date();
   return (
     <div className="app-container">
       <div className="app-wrapper">
@@ -47,14 +47,7 @@ function App() {
           </div>
         </div>
       </div>
-      <footer className="app-footer">
-        <button> Start </button>
-        <div className="app-footer_date">
-          {" "}
-          {date.getHours()}:{date.getMinutes()}
-          <span>{date.toDateString()}</span>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
