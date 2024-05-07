@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Variera";
+  src: url(./fonts/variera.ttf);
+}
 .app-container {
   max-width: calc(1366px - 16px);
   height: calc(100vh - 16px);
@@ -13,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .app-wrapper_col {
   display: flex;
@@ -75,14 +80,16 @@
   align-items: center;
   margin-right: 15px;
 }
-.app-footer_contact > img {
+.app-footer_contact > a > img {
   width: 25px;
   height: 25px;
+}
+.app-footer_contact > a {
   border: 1px solid transparent;
   margin: 0 10px;
   cursor: pointer;
 }
-.app-footer_contact > img:hover {
+.app-footer_contact > a:hover {
   border-color: #d3d3d3;
 }
 .app-footer_col > button:hover {
@@ -94,4 +101,46 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* App Modal */
+.app-modal {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000f;
+  top: 150px;
+}
+.app-modal_header {
+  display: flex;
+  background-color: #b9b9b9;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+.app-modal_header__close {
+  left: 5px;
+  position: absolute;
+}
+.app-modal_header__close > button {
+  margin-left: 5px;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+  font-size: 8px;
+}
+.app-modal_header__close > button:hover {
+  opacity: 0.7;
+}
+.app-modal_header__title {
+}
+.app-modal_content__info {
+  font-size: 10px;
+  color: #b9b9b9;
+}
+.app-modal_content {
+  padding: 15px;
 }

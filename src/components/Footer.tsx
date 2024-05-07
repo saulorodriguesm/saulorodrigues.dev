@@ -12,10 +12,34 @@ const Footer = () => {
         </div>
         <div className="app-footer_col">
           <div className="app-footer_contact">
-            <img src={icons.insta} />
-            <img src={icons.linkedin} />
-            <img src={icons.youtube} />
-            <img src={icons.github} />
+            <a href="https://www.instagram.com/sauloagain/">
+              {" "}
+              <img
+                src={icons.insta}
+                alt="Ícone da rede social Instagram em formato pixelado"
+              />{" "}
+            </a>
+            <a href="https://www.linkedin.com/in/saulorodriguesm/">
+              {" "}
+              <img
+                src={icons.linkedin}
+                alt="Ícone da rede social Linkedin em formato pixelado"
+              />
+            </a>
+            <a href="https://www.youtube.com/@saulorodm">
+              {" "}
+              <img
+                src={icons.youtube}
+                alt="Ícone da rede social Youtube em formato pixelado"
+              />
+            </a>
+            <a href="https://github.com/saulorodriguesm">
+              {" "}
+              <img
+                src={icons.github}
+                alt="Ícone da rede social Github em formato pixelado"
+              />
+            </a>
           </div>
           <div className="app-footer_date">
             {" "}
