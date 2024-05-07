@@ -1,21 +1,5 @@
-import React from "react";
+import { useState } from "react";
 import "./App.css";
-<<<<<<< Updated upstream
-
-function App() {
-  const date = new Date();
-  return (
-    <div className="app-container">
-      <div className="app-wrapper">working in progress...</div>
-      <footer className="app-footer">
-        <button> Start </button>
-        <div className="app-footer_date">
-          {" "}
-          {date.getHours()}:{date.getMinutes()}
-          <span>{date.toDateString()}</span>
-        </div>
-      </footer>
-=======
 import icons from "./components/Icons";
 import Footer from "./components/Footer";
 import Modal from "./components/Modal/Modal";
@@ -62,7 +46,6 @@ function App() {
         <div className="app-wrapper_col">
           <div className="app-wrapper_item">
             <button onClick={() => openModal("stack")}>
-              {" "}
               <div className="app-wrapper_item__icon">
                 <img
                   src={icons.stack}
@@ -79,7 +62,6 @@ function App() {
         )}
       </div>
       <Footer />
->>>>>>> Stashed changes
     </div>
   );
 }

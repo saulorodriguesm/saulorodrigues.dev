@@ -1,12 +1,10 @@
 @font-face {
-  font-family: 'Dogica';
+  font-family: "Dogica";
   src: url(./fonts/dogica.otf);
 }
 body {
   margin: 0;
-  font-family: -apple-system, 'Dogica', "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Dogica";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./assets/main-bg.jpg);
@@ -17,4 +15,7 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+button {
+  font-family: "Dogica";
 }
