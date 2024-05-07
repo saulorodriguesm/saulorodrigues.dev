@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Variera";
+  src: url(./fonts/variera.ttf);
+}
 .app-container {
   max-width: calc(1366px - 16px);
   height: calc(100vh - 16px);
@@ -11,10 +15,45 @@
   font-size: 14px;
   color: #fff;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
-.app-footer {
+.app-wrapper_col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  margin: 15px 15px 0;
+}
+.app-wrapper_item {
+  width: 85px;
+  height: 85px;
+  margin: 10px 0;
+}
+.app-wrapper_item > button {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.app-wrapper_item > button:hover {
+  border: 1px solid blue;
+}
+.app-wrapper_item__icon {
+  margin: 0 0 5px;
+}
+.app-wrapper_item__icon > img {
+  width: 50px;
+  height: 50px;
+}
+.app-footer > footer {
   height: 40px;
   width: 100%;
   background-color: #b9b9b9;
@@ -22,15 +61,38 @@
   justify-content: space-between;
   align-items: center;
 }
-.app-footer > button {
+.app-footer_col {
+  height: 100%;
+  margin-top: 5px;
+  display: flex;
+}
+.app-footer_col > button {
   background-color: #d3d3d3;
   width: 100px;
   height: 100%;
   font-size: 12px;
   font-family: "Dogica";
   cursor: pointer;
+  height: 100%;
 }
-.app-footer > button:hover{ 
+.app-footer_contact {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+.app-footer_contact > a > img {
+  width: 25px;
+  height: 25px;
+}
+.app-footer_contact > a {
+  border: 1px solid transparent;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.app-footer_contact > a:hover {
+  border-color: #d3d3d3;
+}
+.app-footer_col > button:hover {
   background-color: #b9b9b9;
 }
 .app-footer_date {
@@ -38,4 +100,47 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+/* App Modal */
+.app-modal {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70%;
+  background-color: white;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000f;
+  top: 150px;
+}
+.app-modal_header {
+  display: flex;
+  background-color: #b9b9b9;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+.app-modal_header__close {
+  left: 5px;
+  position: absolute;
+}
+.app-modal_header__close > button {
+  margin-left: 5px;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+  font-size: 8px;
+}
+.app-modal_header__close > button:hover {
+  opacity: 0.7;
+}
+.app-modal_header__title {
+}
+.app-modal_content__info {
+  font-size: 10px;
+  color: #b9b9b9;
+}
+.app-modal_content {
+  padding: 15px;
 }
