@@ -11,8 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./assets/main-bg.jpg);
   background-repeat: round;
+  max-width: 1366px;
+  margin: 0 auto;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;

@@ -1,9 +1,9 @@
 .app-container {
-  max-width: calc(1366px - 16px);
   height: calc(100vh - 16px);
   margin: 0 auto;
   background-color: black;
   border: 8px solid #b9b9b9;
+  position: relative;
 }
 .app-wrapper {
   height: calc(100% - 40px);
@@ -11,6 +11,25 @@
   font-size: 14px;
   color: #fff;
   display: flex;
+<<<<<<< Updated upstream
+=======
+  justify-content: space-between;
+  align-items: center;
+}
+.app-wrapper_col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
+  margin: 15px 15px 0;
+}
+.app-wrapper_item {
+  width: 85px;
+  height: 85px;
+  margin: 10px 0;
+}
+.app-wrapper_item > button {
+>>>>>>> Stashed changes
   justify-content: center;
   align-items: center;
 }
@@ -38,4 +57,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+<<<<<<< Updated upstream
+=======
+  justify-content: center;
+}
+
+/* App Modal */
+.app-modal {
+  width: 620px;
+  height: 470px;
+  background-color: white;
+  color: #000f;
+}
+.app-modal_header {
+  display: flex;
+  background-color: #b9b9b9;
+  padding: 10px 0;
+  align-items: center;
+  justify-content: center;
+}
+.app-modal_header__close {
+  left: 5px;
+  position: absolute;
+}
+.app-modal_header__close > button {
+  margin-left: 5px;
+  background-color: red;
+  color: #fff;
+  cursor: pointer;
+  font-size: 8px;
+}
+.app-modal_header__close > button:hover {
+  opacity: 0.7;
+}
+.app-modal_header__title {
+}
+.app-modal_content__info {
+  font-size: 10px;
+  color: #b9b9b9;
+}
+.app-modal_content {
+  padding: 15px;
+>>>>>>> Stashed changes
 }
