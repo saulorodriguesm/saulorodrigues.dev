@@ -1,14 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import icons from "./Icons";
 
 const Footer = () => {
+  const [isButtonClicked, setButtonClicked] = useState<boolean>(false);
   const date = new Date();
   return (
     <div className="app-footer">
       <footer>
         <div className="app-footer_col">
           {" "}
-          <button> Start </button>{" "}
+          <button
+            onClick={() => {
+              isButtonClicked
+                ? setButtonClicked(false)
+                : setButtonClicked(true);
+            }}
+          >
+            {" "}
+            Start{" "}
+          </button>{" "}
+          {isButtonClicked ? (
+            <div className="app-footer_start">
+              {" "}
+              <img src={icons.settings} />
+              Settings{" "}
+            </div>
+          ) : null}
         </div>
         <div className="app-footer_col">
           <div className="app-footer_contact">

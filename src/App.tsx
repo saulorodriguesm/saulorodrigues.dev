@@ -55,6 +55,17 @@ function App() {
               <div>My Stack </div>{" "}
             </button>{" "}
           </div>
+          <div className="app-wrapper_item">
+            <button onClick={() => openModal("stack")}>
+              <div className="app-wrapper_item__icon">
+                <img
+                  src={icons.about}
+                  alt="Icone pixelado de um monitor de computador na cor azul."
+                />
+              </div>
+              <div>About </div>{" "}
+            </button>{" "}
+          </div>
         </div>
 
         {isModalOpen && (

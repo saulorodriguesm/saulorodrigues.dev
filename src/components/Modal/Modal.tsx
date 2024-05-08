@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Blog from "./components/Blog";
 import Career from "./components/Career";
 import Stack from "./components/Stack";
@@ -10,8 +10,9 @@ interface Props {
 
 const Modal: React.FC<Props> = ({ closeModal, category }) => {
   const [isDragging, setIsDragging] = useState(false);
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 300, y: 100 });
   const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
+  const modalRef = useRef<HTMLDivElement>(null);
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     setIsDragging(true);
@@ -23,10 +24,22 @@ const Modal: React.FC<Props> = ({ closeModal, category }) => {
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!isDragging) return;
 
-    setPosition({
-      x: e.clientX - initialPosition.x,
-      y: e.clientY - initialPosition.y,
-    });
+    const parentElement = modalRef.current?.parentElement;
+    if (!parentElement) return;
+
+    const maxX =
+      modalRef.current.parentElement.offsetWidth - modalRef.current.offsetWidth;
+    const maxY =
+      modalRef.current.parentElement.offsetHeight -
+      modalRef.current.offsetHeight;
+
+    let newX = e.clientX - initialPosition.x;
+    let newY = e.clientY - initialPosition.y;
+
+    newX = Math.max(0, Math.min(newX, maxX));
+    newY = Math.max(0, Math.min(newY, maxY));
+
+    setPosition({ x: newX, y: newY });
   };
 
   const handleMouseUp = () => {
@@ -40,10 +53,9 @@ const Modal: React.FC<Props> = ({ closeModal, category }) => {
         position: "absolute",
         top: position.y,
         left: position.x,
-        border: "1px solid black",
-        padding: "10px",
         cursor: isDragging ? "grabbing" : "grab",
       }}
+      ref={modalRef}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}

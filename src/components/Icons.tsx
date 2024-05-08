@@ -6,7 +6,8 @@ import instaIcon from "../assets/icons/insta.png";
 import youtubeIcon from "../assets/icons/youtube.png"
 import githubIcon from "../assets/icons/github.png"
 import linkedinIcon from "../assets/icons/linkedin.png"
-
+import aboutIcon from "../assets/icons/monitor.png"
+import settingsIcon from "../assets/icons/settings.png"
 
 const icons = {
   blog: blogIcon,
@@ -16,7 +17,9 @@ const icons = {
   insta: instaIcon,
   youtube: youtubeIcon,
   github: githubIcon,
-  linkedin: linkedinIcon
+  linkedin: linkedinIcon,
+  about: aboutIcon,
+  settings: settingsIcon
 };
 
 export default icons;
