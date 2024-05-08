@@ -6,11 +6,13 @@ import Stack from "./components/Stack";
 interface Props {
   closeModal: () => void;
   category: string;
+  width: string;
+  height: string;
 }
 
-const Modal: React.FC<Props> = ({ closeModal, category }) => {
+const Modal: React.FC<Props> = ({ closeModal, category, width, height }) => {
   const [isDragging, setIsDragging] = useState(false);
-  const [position, setPosition] = useState({ x: 300, y: 100 });
+  const [position, setPosition] = useState({ x: 150, y: 100 });
   const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
   const modalRef = useRef<HTMLDivElement>(null);
 
@@ -46,6 +48,7 @@ const Modal: React.FC<Props> = ({ closeModal, category }) => {
     setIsDragging(false);
   };
 
+  console.log(width);
   return (
     <div
       className="app-modal"
@@ -54,6 +57,8 @@ const Modal: React.FC<Props> = ({ closeModal, category }) => {
         top: position.y,
         left: position.x,
         cursor: isDragging ? "grabbing" : "grab",
+        width: width,
+        height: height,
       }}
       ref={modalRef}
       onMouseDown={handleMouseDown}
@@ -65,7 +70,7 @@ const Modal: React.FC<Props> = ({ closeModal, category }) => {
           {" "}
           <button onClick={closeModal}>X</button>{" "}
         </div>
-        <div className="app-modal_header__title"> Modal </div>
+        <div className="app-modal_header__title"> {category} </div>
       </div>
       <div className="app-modal_content">
         {category === "blog" ? (

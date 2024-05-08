@@ -1,9 +1,13 @@
-import React from 'react';
+import React from "react";
 
-// import { Container } from './styles';
+const Career: React.FC = () => {
+  return (
+    <div>
+      <div>ACCT - Front End Developer</div>
+      <div>Itaú - Full Stack Developer</div>
+      <div>Runtalent - Full Stack Developer</div>
+    </div>
+  );
+};
 
-const components: React.FC = () => {
-  return <div />;
-}
-
-export default components;
+export default Career;
