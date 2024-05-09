@@ -43,7 +43,7 @@ function App() {
                   alt="Icone pixelado de um globo terrestre, frequentemente utilizado para representar navegadores web."
                 />
               </div>
-              <div>
+              <div className="app-wrapper_item__name">
                 {language === "pt"
                   ? "Meu Blog"
                   : language === "en"
@@ -57,7 +57,7 @@ function App() {
               <div className="app-wrapper_item__icon">
                 <img src={icons.career} alt="Icone pixelado de troféu." />
               </div>
-              <div>
+              <div className="app-wrapper_item__name">
                 {language === "pt"
                   ? "Minha Carreira"
                   : language === "en"
@@ -74,7 +74,7 @@ function App() {
           ></img>
           <div className="app-wrapper_greetings">
             <h1 className="app-wrapper_greetings__title">saulorodrigues.dev</h1>
-            &gt; 
+            &gt;
             {language === "pt"
               ? "desenvolvedor front end"
               : language === "en"
@@ -99,7 +99,7 @@ function App() {
                   alt="Icone pixelado de duas setas opostas, frequentemente usadas para representar códigos de aplicativos e sistemas."
                 />
               </div>
-              <div>
+              <div className="app-wrapper_item__name">
                 {language === "pt"
                   ? "Minha Stack"
                   : language === "en"
@@ -116,7 +116,7 @@ function App() {
                   alt="Icone pixelado de um monitor de computador na cor azul."
                 />
               </div>
-              <div>
+              <div className="app-wrapper_item__name">
                 {language === "pt"
                   ? "Sobre o app"
                   : language === "en"

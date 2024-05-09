@@ -27,9 +27,14 @@
   margin: 15px 15px 0;
 }
 .app-wrapper_item {
-  width: 85px;
-  height: 85px;
-  margin: 10px 0;
+  width: 120px;
+  margin: 5px 0;
+  padding: 15px 0;
+  border: 1px solid transparent;
+}
+.app-wrapper_item:hover {
+  background-color: rgba(189, 148, 240, 0.4);
+  border: 1px dotted #be94f0;
 }
 .app-wrapper_item > button {
   justify-content: center;
@@ -38,13 +43,21 @@
   flex-direction: column;
   align-items: center;
   background: transparent;
-  color: #fff;
   border: none;
   cursor: pointer;
-  border: 1px solid transparent;
+  padding: 0;
 }
-.app-wrapper_item > button:hover {
-  border: 1px solid blue;
+.app-wrapper_item__name {
+  background-color: #fff;
+  font-size: 11px;
+  border-radius: 5%;
+  color: #000;
+  width: 100px;
+  padding: 10px;
+  min-height: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 .app-wrapper_item__icon {
   margin: 0 0 5px;
@@ -109,6 +122,8 @@
   font-family: "Dogica";
   cursor: pointer;
   height: 100%;
+  border: 1px solid #b7b7b7;
+  box-shadow: 1px 1px #000;
 }
 .app-footer_contact {
   display: flex;
@@ -178,10 +193,17 @@
   align-items: center;
   font-size: 14px;
 }
+.app-settings_header > button:hover {
+  opacity: 0.7;
+}
 .app-settings_header > button {
+  margin: 0 10px;
   background-color: red;
-  color: #ccc;
-  margin: 0 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 8px;
+  border: 1px solid #ccc;
+  padding: 5px;
 }
 .app-settings_language {
   display: flex;
@@ -191,7 +213,7 @@
 }
 .app-settings_language__label {
   display: flex;
-  justify-content: center;
+  font-weight: bold;
 }
 .app-settings_language__options {
   display: flex;
@@ -199,24 +221,29 @@
   flex-direction: column;
   margin: 15px 0 0;
 }
-.app-settings_language button {
-  background-color: transparent;
-  border: none;
+.app-settings_language__option {
   display: flex;
   align-items: center;
   margin: 5px 0;
+}
+.app-settings_language button {
+  background-color: transparent;
+  border: 1px solid transparent;
   font-size: 14px;
   font-family: "Firacode";
+  cursor: pointer;
+  min-width: 100px;
+  text-align: left;
 }
+.app-settings_language button:hover {
+  border: 1px dotted #b9b9b9;
+}
+
 .app-settings_language__icon {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  cursor: pointer;
   margin-right: 5px;
-}
-.app-settings_language__icon:hover {
-  opacity: 0.7;
 }
 /* END FOOTER*/
 
@@ -227,6 +254,7 @@
   font-family: "Firacode";
   display: flex;
   flex-direction: column;
+  min-height: 450px;
 }
 .app-modal_header {
   display: flex;
@@ -245,6 +273,8 @@
   color: #fff;
   cursor: pointer;
   font-size: 8px;
+  padding: 5px;
+  border: 1px solid #ccc;
 }
 .app-modal_header__close > button:hover {
   opacity: 0.7;
@@ -297,8 +327,8 @@
   margin: 10px 0 20px;
 }
 .app-modal_content__career__logo > img {
-  width: 125px;
-  height: 125px;
+  width: 100px;
+  height: 100px;
 }
 .app-modal_content__career__company {
   font-size: 14px;

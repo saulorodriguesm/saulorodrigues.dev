@@ -103,7 +103,7 @@ const Footer = () => {
       {isOpenSettings ? (
         <div className="app-settings">
           <div className="app-settings_header">
-            <button>X</button>
+            <button onClick={() => setIsOpenSettings(false)}>X</button>
             {language === "pt"
               ? "configurações"
               : language === "en"
@@ -120,13 +120,13 @@ const Footer = () => {
                   : null}
               </div>
               <div className="app-settings_language__options">
-                <div>
+                <div className="app-settings_language__option">
+                  <img
+                    alt="Ícone da bandeira do Brasil em formato pixelado"
+                    className="app-settings_language__icon"
+                    src={icons.pt}
+                  />
                   <button onClick={() => setLanguageAtSession("pt")}>
-                    <img
-                      alt="Ícone da bandeira do Brasil em formato pixelado"
-                      className="app-settings_language__icon"
-                      src={icons.pt}
-                    />
                     {language === "pt"
                       ? "português"
                       : language === "en"
@@ -134,13 +134,13 @@ const Footer = () => {
                       : null}
                   </button>
                 </div>
-                <div>
+                <div className="app-settings_language__option">
+                  <img
+                    alt="Ícone da bandeira do Reino Unido em formato pixelado"
+                    className="app-settings_language__icon"
+                    src={icons.eng}
+                  />
                   <button onClick={() => setLanguageAtSession("en")}>
-                    <img
-                      alt="Ícone da bandeira do Reino Unido em formato pixelado"
-                      className="app-settings_language__icon"
-                      src={icons.eng}
-                    />
                     {language === "pt"
                       ? "inglês"
                       : language === "en"
