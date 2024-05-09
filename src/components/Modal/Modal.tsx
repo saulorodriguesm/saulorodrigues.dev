@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import Blog from "./components/Blog";
 import Career from "./components/Career";
 import Stack from "./components/Stack";
+import About from "./components/About";
 
 interface Props {
   closeModal: () => void;
@@ -56,7 +57,7 @@ const Modal: React.FC<Props> = ({ closeModal, category, width, height }) => {
         position: "absolute",
         top: position.y,
         left: position.x,
-        cursor: isDragging ? "grabbing" : "grab",
+        cursor: isDragging ? "grabbing" : "default",
         width: width,
         height: height,
       }}
@@ -67,8 +68,7 @@ const Modal: React.FC<Props> = ({ closeModal, category, width, height }) => {
     >
       <div className="app-modal_header">
         <div className="app-modal_header__close">
-          {" "}
-          <button onClick={closeModal}>X</button>{" "}
+          <button onClick={closeModal}>X</button>
         </div>
         <div className="app-modal_header__title"> {category} </div>
       </div>
@@ -79,6 +79,8 @@ const Modal: React.FC<Props> = ({ closeModal, category, width, height }) => {
           <Stack />
         ) : category === "career" ? (
           <Career />
+        ) : category === "about" ? (
+          <About />
         ) : null}
       </div>
     </div>

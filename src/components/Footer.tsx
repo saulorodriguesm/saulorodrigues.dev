@@ -25,7 +25,6 @@ const Footer = () => {
     <div className="app-footer">
       <footer>
         <div className="app-footer_col">
-          {" "}
           <button
             onClick={() => {
               isButtonClicked
@@ -33,15 +32,13 @@ const Footer = () => {
                 : setButtonClicked(true);
             }}
           >
-            {" "}
             {language === "pt" ? "Iniciar" : language === "en" ? "Start" : null}
-          </button>{" "}
+          </button>
           {isButtonClicked ? (
             <div
               onClick={() => setIsOpenSettings(true)}
               className="app-footer_start"
             >
-              {" "}
               <img
                 alt="Ícone de uma engrenagem amarela em formato pixelado"
                 src={icons.settings}
@@ -56,19 +53,21 @@ const Footer = () => {
         </div>
         <div className="app-footer_col">
           <div className="app-footer_contact">
-            <a href="https://www.instagram.com/sauloagain/" target="_blank" rel="noreferrer">
-              {" "}
+            <a
+              href="https://www.instagram.com/sauloagain/"
+              target="_blank"
+              rel="noreferrer"
+            >
               <img
                 src={icons.insta}
                 alt="Ícone da rede social Instagram em formato pixelado"
-              />{" "}
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/saulorodriguesm/"
               target="_blank"
               rel="noreferrer"
             >
-              {" "}
               <img
                 src={icons.linkedin}
                 alt="Ícone da rede social Linkedin em formato pixelado"
@@ -79,7 +78,6 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              {" "}
               <img
                 src={icons.youtube}
                 alt="Ícone da rede social Youtube em formato pixelado"
@@ -90,7 +88,6 @@ const Footer = () => {
               target="_blank"
               rel="noreferrer"
             >
-              {" "}
               <img
                 src={icons.github}
                 alt="Ícone da rede social Github em formato pixelado"
@@ -98,7 +95,6 @@ const Footer = () => {
             </a>
           </div>
           <div className="app-footer_date">
-            {" "}
             {date.getHours()}:{date.getMinutes()}
             <span>{date.toDateString()}</span>
           </div>
@@ -107,7 +103,7 @@ const Footer = () => {
       {isOpenSettings ? (
         <div className="app-settings">
           <div className="app-settings_header">
-            <button>X</button>{" "}
+            <button>X</button>
             {language === "pt"
               ? "configurações"
               : language === "en"

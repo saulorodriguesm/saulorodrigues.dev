@@ -37,7 +37,6 @@ function App() {
         <div className="app-wrapper_col">
           <div className="app-wrapper_item">
             <button onClick={() => openModal("blog", "1000px", "70vh")}>
-              {" "}
               <div className="app-wrapper_item__icon">
                 <img
                   src={icons.blog}
@@ -49,13 +48,12 @@ function App() {
                   ? "Meu Blog"
                   : language === "en"
                   ? "My Blog"
-                  : null}{" "}
-              </div>{" "}
-            </button>{" "}
+                  : null}
+              </div>
+            </button>
           </div>
           <div className="app-wrapper_item">
             <button onClick={() => openModal("career", "1000px", "50vh")}>
-              {" "}
               <div className="app-wrapper_item__icon">
                 <img src={icons.career} alt="Icone pixelado de troféu." />
               </div>
@@ -65,9 +63,9 @@ function App() {
                   : language === "en"
                   ? "My Career"
                   : null}
-              </div>{" "}
-            </button>{" "}
-          </div>{" "}
+              </div>
+            </button>
+          </div>
         </div>
         <div className="app-wrapper_center">
           <img
@@ -75,21 +73,20 @@ function App() {
             alt="Avatar do desenvolvedor deste site em formato pixelado e com um fundo roxo."
           ></img>
           <div className="app-wrapper_greetings">
-            {" "}
-            <h1 className="app-wrapper_greetings__title">
-              {" "}
-              saulorodrigues.dev
-            </h1>
-            &gt;{" "}
+            <h1 className="app-wrapper_greetings__title">saulorodrigues.dev</h1>
+            &gt; 
             {language === "pt"
-              ? "desenvolvedor full stack"
+              ? "desenvolvedor front end"
               : language === "en"
-              ? "full stack developer"
+              ? "front end developer"
               : null}
             <br />
             <div className="app-wrapper_greetings__mail">
-              {" "}
-              <img alt="Icone pixelado de uma carta, frequentemente utilizado para representar email." src={icons.mail} /> saulorodm@gmail.com
+              <img
+                alt="Icone pixelado de uma carta, frequentemente utilizado para representar email."
+                src={icons.mail}
+              />
+              saulorodm@gmail.com
             </div>
           </div>
         </div>
@@ -107,9 +104,9 @@ function App() {
                   ? "Minha Stack"
                   : language === "en"
                   ? "My Stack"
-                  : null}{" "}
-              </div>{" "}
-            </button>{" "}
+                  : null}
+              </div>
+            </button>
           </div>
           <div className="app-wrapper_item">
             <button onClick={() => openModal("about", "400px", "400px")}>
@@ -124,9 +121,9 @@ function App() {
                   ? "Sobre o app"
                   : language === "en"
                   ? "About app"
-                  : null}{" "}
-              </div>{" "}
-            </button>{" "}
+                  : null}
+              </div>
+            </button>
           </div>
         </div>
 

@@ -12,6 +12,13 @@ import avatar from "../assets/avatar.jpg";
 import mailIcon from "../assets/icons/mail.png";
 import brazilIcon from "../assets/icons/pt.png";
 import ukIcon from "../assets/icons/en.png";
+import itauIcon from "../assets/career/itau.png";
+import runtalentIcon from "../assets/career/runtalent.png";
+import acctIcon from "../assets/career/acct.png";
+import reactIcon from "../assets/stack/react.png";
+import angularIcon from "../assets/stack/angular.png";
+import vtexIcon from "../assets/stack/vtex.png";
+import tsIcon from "../assets/stack/ts.png";
 
 const icons = {
   blog: blogIcon,
@@ -28,6 +35,13 @@ const icons = {
   mail: mailIcon,
   pt: brazilIcon,
   eng: ukIcon,
+  itau: itauIcon,
+  runtalent: runtalentIcon,
+  acct: acctIcon,
+  react: reactIcon,
+  angular: angularIcon,
+  vtex: vtexIcon,
+  ts: tsIcon,
 };
 
 export default icons;

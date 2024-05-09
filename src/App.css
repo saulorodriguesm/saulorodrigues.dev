@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Firacode";
+  src: url(./fonts/firacode.ttf);
+}
 /* WRAPPER*/
 .app-container {
   height: calc(100vh - 16px);
@@ -158,6 +162,7 @@
   border: 1px solid #b9b9b9;
   width: 350px;
   height: 300px;
+  font-family: "Firacode";
 }
 .app-settings_wrapper {
   display: flex;
@@ -200,6 +205,8 @@
   display: flex;
   align-items: center;
   margin: 5px 0;
+  font-size: 14px;
+  font-family: "Firacode";
 }
 .app-settings_language__icon {
   width: 30px;
@@ -216,7 +223,10 @@
 /* APPS MODAL */
 .app-modal {
   background-color: white;
-  color: #000f;
+  color: #000;
+  font-family: "Firacode";
+  display: flex;
+  flex-direction: column;
 }
 .app-modal_header {
   display: flex;
@@ -245,5 +255,101 @@
 }
 .app-modal_content {
   padding: 15px;
+  height: 100%;
+}
+.app-modal_content__posts {
+  display: flex;
+  height: 100%;
+}
+.app-modal_content__list___title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.app-modal_content__list {
+  width: 20%;
+  padding-right: 10px;
+}
+.app-modal_content__list > span:hover {
+  color: #203354;
+  cursor: pointer;
+}
+.app-modal_content__post {
+  width: 80%;
+  border-left: 1px solid #c6c6c6;
+  padding: 0 20px;
+  text-align: justify;
+}
+.app-modal_content__career {
+  display: flex;
+  justify-content: space-between;
+}
+.app-modal_content__career___experience {
+  width: 33%;
+  padding: 0 20px;
+  border-right: 1px solid #ccc;
+}
+.app-modal_content__career___experience:last-child {
+  border: none;
+}
+.app-modal_content__career__logo {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 20px;
+}
+.app-modal_content__career__logo > img {
+  width: 125px;
+  height: 125px;
+}
+.app-modal_content__career__company {
+  font-size: 14px;
+}
+.app-modal_content__career__text {
+  margin-top: 15px;
+  text-align: justify;
+  font-size: 12px;
+}
+.app-modal_content__stack__logo > img {
+  width: 100px;
+  height: 100px;
+}
+.app-modal_content__stacks {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+.app-modal_content__stack {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 45%;
+}
+.app-modal_content__stack___footer {
+  background-color: #b9b9b9;
+  height: 10%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+.app-modal_content__stack___footer > a:hover {
+  opacity: 0.5;
+}
+.app-modal_about__text {
+  margin: 10px 0;
+  font-size: 12px;
+}
+.app-modal_about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.app-modal_about__body {
+}
+.app-modal_about__footer {
+  font-size: 10px;
+  color: #b9b9b9;
 }
 /*END APPS MODAL*/
