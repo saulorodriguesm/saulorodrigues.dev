@@ -26,7 +26,7 @@ const About: React.FC<Props> = ({ language }) => {
           <a href="https://github.com/saulorodriguesm/my-space/blob/main/README.md">
             README
           </a>{" "}
-          {language === "pt" ? "do projeto" : "of the project"}do projeto.
+          {language === "pt" ? "do projeto" : "of the project"}.
         </div>
       </div>
       <div className="app-modal_about__footer">
