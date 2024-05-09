@@ -1,12 +1,16 @@
 import React from "react";
 import icons from "../../Icons";
 
-const Stack: React.FC = () => {
+interface Props {
+  language: string;
+}
+
+const Stack: React.FC<Props> = ({ language }) => {
   return (
     <div className="app-modal_content__stacks">
       <div className="app-modal_content__stack">
         <div className="app-modal_content__stack__logo">
-          <img src={icons.vtex} />
+          <img alt="Logotipo da empresa VTEX." src={icons.vtex} />
         </div>
         <div className="app-modal_content__stack__name">
           <b>VTEX</b>
@@ -20,7 +24,7 @@ const Stack: React.FC = () => {
       </div>
       <div className="app-modal_content__stack">
         <div className="app-modal_content__stack__logo">
-          <img src={icons.react} />
+          <img alt="Logotipo do framework ReactJS." src={icons.react} />
         </div>
 
         <div className="app-modal_content__stack__name">
@@ -35,7 +39,7 @@ const Stack: React.FC = () => {
       </div>
       <div className="app-modal_content__stack">
         <div className="app-modal_content__stack__logo">
-          <img src={icons.angular} />
+          <img alt="Logotipo do framework Angular." src={icons.angular} />
         </div>
         <div className="app-modal_content__stack__name">
           <b>Angular</b>
@@ -49,7 +53,7 @@ const Stack: React.FC = () => {
       </div>
       <div className="app-modal_content__stack">
         <div className="app-modal_content__stack__logo">
-          <img src={icons.ts} />
+          <img alt="Logotipo da linguagem TypeScript." src={icons.ts} />
         </div>
         <div className="app-modal_content__stack__name">
           <b>TypeScript</b>
@@ -62,8 +66,10 @@ const Stack: React.FC = () => {
         </div>
       </div>
       <div className="app-modal_content__stack___footer">
-        Confira mais projetos com diversas tecnologias:
-        <a href="https://github.com/saulorodriguesm/"> Meu Github</a>
+        {language === "pt"
+          ? "Confira mais projetos com diversas tecnologias"
+          : "Check out more projects with different technologies"}
+        : <a href="https://github.com/saulorodriguesm/"> Github</a>
       </div>
     </div>
   );

@@ -376,10 +376,45 @@
   justify-content: space-between;
   height: 100%;
 }
-.app-modal_about__body {
-}
 .app-modal_about__footer {
   font-size: 10px;
   color: #b9b9b9;
 }
 /*END APPS MODAL*/
+.app-mobile-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+.app-mobile-wrapper > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+.app-mobile-title,
+.app-mobile-text {
+  color: #fff;
+  text-align: center;
+}
+.app-mobile-title {
+  font-size: 24px;
+  background-color: black;
+  margin-bottom: 30px;
+}
+.app-mobile-text {
+  font-size: 10px;
+  max-width: 70%;
+  margin-top: 0px;
+}
+.app-mobile-icons { 
+  display: flex;
+  margin-top: 30px;
+}
+.app-mobile-icons img{ 
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}

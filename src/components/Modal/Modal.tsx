@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Blog from "./components/Blog";
 import Career from "./components/Career";
 import Stack from "./components/Stack";
@@ -15,6 +15,7 @@ const Modal: React.FC<Props> = ({ closeModal, category, width, height }) => {
   const [isDragging, setIsDragging] = useState(false);
   const [position, setPosition] = useState({ x: 150, y: 100 });
   const [initialPosition, setInitialPosition] = useState({ x: 0, y: 0 });
+  const [language, setLanguage] = useState<string>("pt");
   const modalRef = useRef<HTMLDivElement>(null);
 
   const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
@@ -49,6 +50,15 @@ const Modal: React.FC<Props> = ({ closeModal, category, width, height }) => {
     setIsDragging(false);
   };
 
+  const getLanguage = () => {
+    const selectedLanguage = sessionStorage.getItem("language");
+    if (selectedLanguage) setLanguage(selectedLanguage);
+  };
+
+  useEffect(() => {
+    getLanguage();
+  }, [language]);
+
   console.log(width);
   return (
     <div
@@ -74,13 +84,13 @@ const Modal: React.FC<Props> = ({ closeModal, category, width, height }) => {
       </div>
       <div className="app-modal_content">
         {category === "blog" ? (
-          <Blog />
+          <Blog language={language} />
         ) : category === "stack" ? (
-          <Stack />
-        ) : category === "career" ? (
-          <Career />
-        ) : category === "about" ? (
-          <About />
+          <Stack language={language} />
+        ) : category === "career" || category === "carreira" ? (
+          <Career language={language} />
+        ) : category === "about" || category === "sobre" ? (
+          <About language={language} />
         ) : null}
       </div>
     </div>

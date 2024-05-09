@@ -19,7 +19,7 @@ const Footer = () => {
 
   useEffect(() => {
     getLanguage();
-  });
+  }, [language]);
 
   return (
     <div className="app-footer">

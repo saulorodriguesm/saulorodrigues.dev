@@ -19,6 +19,9 @@ import reactIcon from "../assets/stack/react.png";
 import angularIcon from "../assets/stack/angular.png";
 import vtexIcon from "../assets/stack/vtex.png";
 import tsIcon from "../assets/stack/ts.png";
+import mobileInsta from "../assets/mobile/instagram.png";
+import mobileLinkedin from "../assets/mobile/linkedin.png";
+import mobileGithub from "../assets/mobile/github.png";
 
 const icons = {
   blog: blogIcon,
@@ -42,6 +45,9 @@ const icons = {
   angular: angularIcon,
   vtex: vtexIcon,
   ts: tsIcon,
+  instaMobile: mobileInsta,
+  gitMobile: mobileGithub,
+  linkedinMobile: mobileLinkedin,
 };
 
 export default icons;
