@@ -54,16 +54,6 @@ const Footer = () => {
         <div className="app-footer_col">
           <div className="app-footer_contact">
             <a
-              href="https://www.instagram.com/sauloagain/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img
-                src={icons.insta}
-                alt="Ícone da rede social Instagram em formato pixelado"
-              />
-            </a>
-            <a
               href="https://www.linkedin.com/in/saulorodriguesm/"
               target="_blank"
               rel="noreferrer"

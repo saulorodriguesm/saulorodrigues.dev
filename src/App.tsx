@@ -172,9 +172,6 @@ function App() {
             <a href="https://github.com/saulorodriguesm">
               <img src={icons.gitMobile} />
             </a>
-            <a href="https://www.instagram.com/sauloagain/">
-              <img src={icons.instaMobile} />
-            </a>
             <a href="https://www.linkedin.com/in/saulorodriguesm/">
               <img src={icons.linkedinMobile} />
             </a>
